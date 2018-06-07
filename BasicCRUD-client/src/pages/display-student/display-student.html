@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Student Details</ion-title>
+    <ion-buttons start>
+      <button (click)="closeStudentModal()"
+              ion-button>
+        <ion-icon name="md-close"></ion-icon>      
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <h2>{{student.name}}</h2>
+      <p><i>{{student.rno}}</i></p>
+      <p>{{student.semester}}</p>
+      <p>{{student.gender}}</p>
+      <p>{{student.mark}}</p>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50 style="text-align: right">
+        <button (click)="updateStudent(student)"
+                ion-button
+                color="secondary">
+          Update
+        </button>
+      </ion-col>
+      <ion-col width-50 style="text-align: left">
+        <button (click)="deleteStudent(student)"
+                ion-button
+                color="danger">
+          Delete
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
